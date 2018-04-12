@@ -1,0 +1,153 @@
+@import './style/now-ui-kit/mixins';
+
+header {
+  position: fixed;
+  background: #99ccff;
+  z-index: 2000;
+  width: 100%;
+
+  .container-fluid {
+    padding-right: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+  div {
+    padding: 0;
+  }
+}
+
+section {
+  text-align: center;
+}
+
+input {
+  margin: 70px 20px;
+}
+
+select {
+  margin: 70px 20px;
+}
+
+.logo {
+  font: 40px/1.5 'Pacifico', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1), 7px 7px 0px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  margin: auto;
+
+  [class^=col-] {
+    border: ridge;
+  }
+}
+
+.btn {
+  margin: 70px 20px;
+}
+
+.chooser-body {
+
+  margin: 0 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    margin: 0 130px;
+
+  }
+}
+
+.login {
+  margin: 0 30px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.login-message {
+  padding-top: 10px;
+}
+
+.logout {
+  float: right;
+  padding-top: 18px;
+}
+
+//fontawesome settings
+.fa {
+  font-size: 22px;
+  padding-right: 10px;
+}
+
+.fa-pencil {
+  padding-right: 10px;
+}
+
+.fa-exclamation-triangle {
+  color: #9d0000;
+  padding-right: 10px;
+}
+
+.fa-check {
+  color: #00ac00;
+  padding-right: 10px;
+}
+
+.fa-info {
+  font-size: 80%;
+  vertical-align: text-top;
+  color: orange;
+}
+
+//loading dot simulation
+.loading-dots {
+  text-align: center;
+  z-index: 5;
+  padding-top: 100px;
+
+  h1 {
+    line-height: 2;
+  }
+
+  .dot {
+    line-height: 100%;
+    display: inline;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    position: relative;
+    top: -1em;
+    font-size: 3.5em;
+    opacity: 0;
+    animation: showHideDot 2.5s ease-in-out infinite;
+
+    &.one {
+      animation-delay: 0.3s;
+    }
+    &.two {
+      animation-delay: 0.5s;
+    }
+    &.three {
+      animation-delay: 0.7s;
+    }
+    &.excl-mark {
+      animation-delay: 0.9s;
+    }
+  }
+}
+
+@keyframes showHideDot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
